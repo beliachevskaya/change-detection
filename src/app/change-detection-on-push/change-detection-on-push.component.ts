@@ -10,8 +10,6 @@ export class ChangeDetectionOnPushComponent implements OnInit, OnChanges {
   @Input() integer: number;
   counter = 0;
 
-  constructor() { }
-
   ngOnChanges() {
     this.counter += this.integer;
   }

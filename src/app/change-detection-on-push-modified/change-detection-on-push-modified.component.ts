@@ -5,7 +5,7 @@ import { Component, OnInit, Input, OnChanges, ChangeDetectorRef } from '@angular
   templateUrl: './change-detection-on-push-modified.component.html',
   styleUrls: ['./change-detection-on-push-modified.component.sass']
 })
-export class ChangeDetectionOnPushModifiedComponent implements OnInit, OnChanges {
+export class ChangeDetectionOnPushModifiedComponent implements OnChanges {
   @Input() integer: number;
   counter = 0;
   constructor(private changeDetector: ChangeDetectorRef) {
@@ -18,7 +18,4 @@ export class ChangeDetectionOnPushModifiedComponent implements OnInit, OnChanges
   ngOnChanges() {
     this.counter += this.integer;
   }
-  ngOnInit() {
-  }
-
 }
